@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+
+
+.about-box-hover{
+
+    @apply  hover:shadow-2xl hover:translate-y-[-10px] hover:bg-white hover:border-2 hover:border-red-600 duration-500;
+}
+.img-before-hover{
+
+    @apply relative overflow-hidden z-[1] before:content-[''] before:absolute before:w-[200px] before:h-[200px] before:bg-black before:top-[-100px] before:left-[-100px] before:opacity-30 before:z-[1] before:duration-500 before:rounded-full before:scale-50 before:translate-x-[-50%] group-hover:before:scale-[7];
+}
+@tailwind utilities;

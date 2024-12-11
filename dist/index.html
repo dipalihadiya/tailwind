@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website Templates | Swigo - Empowering Your Food Business | DexignZone | Tailwind</title>
+
+    <link href="../dist/img/favicon.png" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="../dist/css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        #cursor {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #cacf7a;
+            border-radius: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            transition: transform ease-out 20ms;
+        }
+        #stalker {
+            position: fixed;
+            margin-top: -15.5px;
+            margin-left: -15.5px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #EE2737;
+            border-radius: 100%;
+            pointer-events: none;
+            transition: transform ease-out 120ms;
+            z-index: 9999;
+        }
+        
+        /* Rotate */
+
+        @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            transform: rotate(360deg);
+        }
+        }
+        .animate-rotate {
+            animation: rotate 4s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div id="cursor"></div>
+    <div id="stalker"></div>
+
+    <header class="fixed w-full  z-[999] bg-white bg-opacity-75">
+        <div class="header">
+            <div class="container mx-auto">
+                <div class="header-content p-5 flex justify-between items-center">
+                    <div class="w-40">
+                        <div class="header-logo">
+                            <a href="index.html" class="pt-2">
+                                <img src="../dist/img/pan1.png" alt="pan" />
+                                <img src="../dist/img/logo (3).png" alt="logo" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-8/12">
+                        <nav class="nav-bar">
+                            <ul class="flex ml-6 relative">
+                                <li class="px-4 py-4 flex items-center justify-center dropdown relative group">
+                                    <a href="index.html" class="text-red-600 font-medium">Home</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4 text-white ms-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>    
+                                    <div class="dropdown-content absolute top-[100%] left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible rounded-xl duration-500 ">
+                                        <ul style="width: 220px; height: auto;">
+                                            <li class="py-2 px-6" >
+                                                <a href="./index.html" class="text-sm text-black hover:text-red-500 duration-500">Home 1</a>
+                                            </li>
+                                            <li class="py-2 px-6">
+                                                <a href="./index.html" class="text-sm text-black hover:text-red-500 duration-500">Home 2</a>
+                                            </li>
+                                            <li class="py-2 px-6">
+                                                <a href="./index.html" class="text-sm text-black hover:text-red-500 duration-500">Home 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>                              
+                                </li>
+                                <li class="px-4 py-4 flex items-center justify-center dropdown relative group">
+                                    <a href="index.html" class="text-slate-700 font-medium">Pages</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4 text-dark ms-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                    <div class="dropdown-content absolute top-[100%] left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible rounded-xl duration-500 ">
+                                        <ul style="width: 220px; height: auto;">
+                                            <li class="py-2 px-6" >
+                                                <a href="./pages/about.html" class="text-sm text-black hover:text-red-500 duration-500">About Us</a>
+                                            </li>
+                                            <li class="py-2 px-6">
+                                                <a href="./pages/team.html" class="text-sm text-black hover:text-red-500 duration-500">Team</a>
+                                            </li>
+                                            <li class="py-2 px-6">
+                                                <a href="./pages/testimonial.html" class="text-sm text-black hover:text-red-500 duration-500">Testimonial</a>
+                                            </li>
+                                            <li class="py-2 px-6">
+                                                <a href="./pages/services.html" class="text-sm text-black hover:text-red-500 duration-500">Services</a>
+                                            </li>
+                                        </ul>
+                                    </div>                                      
+                                </li>
+                                <li class="px-4 py-4 flex items-center justify-center">
+                                    <a href="./pages/shop.html" class="text-slate-700 font-medium">Shop</a>
+                                </li>
+                                <li class="px-4 py-4 flex items-center justify-center dropdown relative group">
+                                    <a href="index.html" class="text-slate-700 font-medium">Blogs</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4 text-dark  ms-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>  
+                                    <div class="dropdown-content absolute top-[100%] left-0 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible rounded-xl duration-500">
+                                        <ul style="width: 220px; height: auto;">
+                                            <li class="py-2 px-6" >
+                                                <a href="./pages/menu.html" class="text-sm text-black hover:text-red-500 duration-500">Our Menu</a>
+                                            </li>
+                                        </ul>
+                                    </div>                                       
+                                </li>
+                                <li class="px-4 py-4 flex">
+                                    <a href="./pages/contacts.html" class="text-slate-700 font-medium">Contact Us</a>                                      
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="w-2/12">
+                        <div class="header-right flex gap-3">
+                            <div class="search-box">
+                                <a href="#" class="block bg-red-100 rounded-lg relative p-2" style="width: 45px; height: 45px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute top-2.5 left-2.5 text-slate-800">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="basket-box">
+                                <a href="#" class="block bg-red-100 rounded-lg relative p-2" style="width: 45px; height: 45px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute top-2.5 left-2.5 text-slate-800">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- banner -->      
+        <section class="banner-bg  pb-0 flex justify-center font-sans relative  mb-96">
+            <img src="img/bg.png" class="item-bg   absolute top-0 right-0 " alt="/"  >		
+            <div class="animate-move absolute -top-9 right-0 mt-32  max-xl:bottom-5 ml-[-50px] w-[53vw] max-md:w-full max-md:mt-[30px]">
+                <img src="img/offer.png" class="offer absolute top-0 left-[800px]" alt="/" >
+                <img src="img/crown.png" class="crown  w-[83%] absolute  top-4 right-0" alt="/">
+                <img src="img/bur.png" class="w-full absolute top-20 right-0" alt="/">
+            </div>
+            <div class="container mx-auto mt-6">
+               <div class="ban flex">
+                <div class="w-7/12">
+                    <div class="banner-content"  style="margin-top: 100px; " data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <h1 class="font-serif  text-black text-7xl leading-normal mb-3">The Number <span class="text-red-600">#1</span> Choice<BR> Your Hunger Solution</h1>
+                        <p class="text-lg text-gray-500 mb-4">Lorem Ipsum is simply dummy text of the printing and<br> typesetting industry. Lorem Ipsum has been the industry's<br> standard dummy text ever since the 1500s,</p>
+                        <div class="banner-btns flex gap-3 mt-[40px]">
+                            <div class="book-btn ">
+                                <a href="#" class="block px-5 py-4 bg-red-600 rounded-md text-white font-bold">Book a Table</a>
+                            </div>
+                            <div class="view-btn">
+                                <a href="#" class="block px-5 py-4 bg-red-600 rounded-md text-white font-bold">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-types flex gap-4 pt-10 pb-3 mt-20">
+                        <a href="#" class="bg-red-100 rounded-lg p-5 block w-auto" data-aos="fade-up"
+                        data-aos-duration="500">
+                            <img src="../dist/img/juice (2).png" alt="juice" />
+                        </a>
+                        <a href="#" class="bg-red-100 rounded-lg p-5 block w-auto" data-aos="fade-up"
+                        data-aos-duration="800">
+                            <img src="../dist/img/hamburger.png" alt="juice" />
+                        </a>
+                        <a href="#" class="bg-red-100  rounded-lg p-5 block w-auto" data-aos="fade-up"
+                        data-aos-duration="1000">
+                            <img src="../dist/img/pizza (1).png" alt="juice" />
+                        </a>
+                        <a href="#" class="bg-red-100 rounded-lg p-5 block w-auto" data-aos="fade-up"
+                        data-aos-duration="1200">
+                            <img src="../dist/img/piece-of-cake.png" alt="juice" />
+                        </a>
+                        <a href="#" class="bg-red-100 rounded-lg p-5 block w-auto" data-aos="fade-up"
+                        data-aos-duration="1400">
+                            <img src="../dist/img/room-service.png" alt="juice" />
+                        </a>
+                    </div>
+                </div>
+                
+               </div>
+            </div>
+        </section>
+
+        <!-- burgur -->
+
+
+        <section class="content-inner mt-20  pb-0 flex  justify-center font-sans" data-aos="fade-up"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="800">
+            <div class="container">
+                    <div class="burger-king flex">
+                        <div class="h-full px-3 mb-6">
+                            <div class="adv-box  text-center  relative rounded-xl h-[450px] w-[400px]" style="background-color: #054F48;">
+                                <div class="adv-content px-5 pt-8 ">
+                                    <span class="special font-bold text-xl text-white">FRIDAY SPECIAL</span>
+                                    <h4 class="title font-extrabold text-4xl  text-yellow-400 leading-10 font-poppins mb-8">TASTY BURGER</h4>
+                                </div>
+                                <div class="adv-media" style=" margin-left: -1px;" >
+                                    <img class="main-media " src="./img/pic1.png" alt="/" >
+                                    <div class="item-media offer-label absolute right-5 bottom-5 w-24 h-24 " class="bg-indigo-500 ..." disabled>
+                                        <img src="./img/label.png" alt="/" class="animate-rotate duration-500" > 
+                                        <span class=" text-xl font-bold top-7 left-3  absolute block leading-tight " style="color:#222222;">50% OFF</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-8/12   px-3">
+                            <div class="row">
+                               <div class="all-burger flex">
+                                <div class="w-1/2  mb-7 px-3 bg-red-500 rounded-xl flex">
+                                    <div class="adv-box bg-[var(--primary)] flex items-center  rounded-xl h-full">
+                                        <div class="adv-media relative rounded-xl h-56   w-52   ">
+                                            <img src="./img/pic3.png" alt="/" class="absolute  " style="bottom:-1px;">
+                                        </div>
+                                        <div class="adv-content p-2.5 " style="margin-left:-15px;">
+                                            <span class="special font-bold  text-white">TODAY SPECIAL</span>
+                                            <h4 class="title text-white font-bold  text-5xl  leading-10 font-poppins mb-2">Nodels</h4>
+                                            <span class="price font-extrabold text-2xl leading-10 block  mb-2" style="color: #F9FE10;">60% OFF</span>
+                                            <button class=" bg-white p-2.5 px-5 rounded-lg font-semibold">
+                                                <a href="#">Add To Cart</a>
+                                            </button>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-1/2  mb-7 px-3">
+                                    <div class="adv-box relative rounded-xl h-full style-3" style="background-image:url('./img/pic15.png'); background-size:cover; background-position:center;">
+                                        <div class="adv-content py-10 pr-3.5 pl-44 ">
+                                            <span class="special font-bold text-base text-white mb-2">MUSHROOM</span>
+                                            <h4 class="title font-extrabold text-4xl  leading-1.2  font-poppins mb-5" style="color: #FECC48;">BURGER</h4>
+                                            <button class=" bg-white p-2.5 px-5 rounded-lg font-semibold">
+                                                <a href="#">Add To Cart</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                                <div class="w-full px-3">
+                                    <div class="adv-box offer relative rounded-xl h-full flex text-center items-center overflow-unset justify-between px-[30px] pt-[30px] pr-[30px] pb-0 max-xl:pr-5 max-xl:p-0 " style="background-image:url('assets/images/background/pic16.png'); background-repeat:no-repeat; background-size:cover; background-color:#138919;">
+                                        <div class="adv-media relative w-60  h-40 ">
+                                            <img src="./img/pic4.png" alt="/"  style=" position: absolute;  top:-60px; left:-90px;  ">
+                                        </div>
+                                        <div class="adv-content">
+                                            <span class="special font-semibold text-lg text-whitem mb-2 ">FOR LIMITED TIME ONLY</span>
+                                            <h4 class="price font-extrabold text-5xl block text-white mb-3" >35% Offer</h4>
+                                        </div>
+                                        <button class=" bg-white p-2.5 px-5 rounded-lg font-semibold ">
+                                            <a href="#">Add To Cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+        <!-- Our Featured Food -->
+
+
+        <section class="content-inner pt-28 pb-5 flex justify-center font-sans" data-aos="fade-up"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="800">
+            <div class="container">
+                    <div class=" text-center">
+                        <h1 class="font-serif font-black text-black text-7xl leading-normal mb-5">Our Featured Food</h1>
+                    </div>
+                        <div class="slide flex mt-12">
+                            <div class="w-1/4  pl-3 pr-3 pb-7">
+                                <div class="group rounded-lg  text-center pt-10 px-5 pb-7 border border-grey-border">
+                                    <div class="w-36 h-36 mt-0 mx-auto mb-2.5 rounded-full border-8 border-white ">
+                                        <img src="./img/pic1.jpg" alt="" class="rounded-full relative group-hover:animate-spin duration-1000">
+                                    </div>
+                                    <div class="mt-auto">
+                                        <h1 class="mb-2.5">
+                                            <a href="#" class="font-semibold text-2xl">
+                                                Pizza
+                                            </a>
+                                        </h1>
+                                        <p class="mb-2 text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                                        <h5 class="font-semibold text-xl"style="color:#EE2737;">$55.00</h5>
+                                        <button class=" bg-white p-2.5 px-5 rounded-lg font-normal mt-4" style="background-color: #EE2737;">
+                                            <a href="#" class="text-white">Add To Cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/4  pl-3 pr-3 pb-7">
+                                <div class="group rounded-lg  text-center pt-10 px-5 pb-7 border border-grey-border">
+                                    <div class="w-36 h-36 mt-0 mx-auto mb-2.5 rounded-full border-8 border-white ">
+                                        <img src="./img/pic2.jpg" alt="" class="rounded-full group-hover:animate-spin">
+                                    </div>
+                                    <div class="mt-auto">
+                                        <h4 class="mb-2.5">
+                                            <a href="#"  class="font-semibold text-2xl">
+                                                Rice
+                                            </a>
+                                        </h4>
+                                        <p class="mb-2  text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                                        <h5 class="font-semibold  text-xl" style="color:#EE2737;">$50.00</h5>
+                                        <button class=" bg-white p-2.5 px-5 rounded-lg font-normal mt-4" style="background-color: #EE2737;">
+                                            <a href="#" class="text-white">Add To Cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/4  pl-3 pr-3 pb-7">
+                                <div class="group rounded-lg  text-center pt-10 px-5 pb-7 border border-grey-border">
+                                    <div class="w-36 h-36 mt-0 mx-auto mb-2.5 border-8 border-white rounded-full duration-1000 z-[1]">
+                                        <img src="./img/pic3.jpg" alt="" class="rounded-full group-hover:animate-spin">
+                                    </div>
+                                    <div class="mt-auto">
+                                        <h4 class="mb-2.5">
+                                            <a href="#"  class="font-semibold text-2xl">
+                                                Green Salad
+                                            </a>
+                                        </h4>
+                                        <p class="mb-2  text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                                        <h5 class="font-semibold  text-xl" style="color:#EE2737;">$45.00</h5>
+                                        <button class=" bg-white p-2.5 px-5 rounded-lg font-normald mt-4" style="background-color: #EE2737;">
+                                            <a href="#" class="text-white">Add To Cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-1/4  pl-3 pr-3 pb-7">
+                                <div class="group rounded-lg  text-center pt-10 px-5 pb-7 border border-grey-border">
+                                    <div class="w-36 h-36 mt-0 mx-auto mb-2.5 rounded-full border-8 border-white ">
+                                        <img src="./img/pic4.jpg " alt="" class="rounded-full group-hover:animate-spin">
+                                    </div>
+                                    <div class="mt-auto">
+                                        <h4 class="mb-2.5">
+                                            <a href="#"  class="font-semibold text-2xl">
+                                                Pasta
+                                            </a>
+                                        </h4>
+                                        <p class="mb-2  text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                                        <h5 class="font-semibold  text-xl" style="color:#EE2737;">$35.00</h5>
+                                        <button class=" bg-white p-2.5 px-5 rounded-lg font-normal mt-4" style="background-color: #EE2737;">
+                                            <a href="#" class="text-white">Add To Cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </section>
+
+        
+        <!-- choose -->
+
+
+        <section class="choose py-28 font-sans"  data-aos="fade-up"
+        data-aos-duration="3000">
+            <div class="container mx-auto bg-red-100 opacity-90 bg-fixed bg-no-repeat rounded-3xl bg-cover bg-center" style="background-image: url(../dist/img/pic10.png); 
+            height: 470px;">
+                <div class="w-full py-20">
+                    <div class="choose-content text-center mb-12">
+                        <h2 class="font-serif font-black text-6xl mb-3">Why Choose Us ?</h2>
+                    </div>
+                    <div class="choose-types flex text-center">
+                        <div class="w-3/12 pt-5 pr-3 pb-8 pl-3">
+                            <div class="icon-box">
+                                <img src="./img/man.png" class="mb-5 mx-auto" alt="delivery" />
+                            </div>
+                            <div class="icon-type">
+                                <p class="font-medium text-black text-lg">24/7 Free Delivery</p>
+                            </div>
+                        </div>
+                        <div class="w-3/12 pt-5 pr-3 pb-8 pl-3">
+                            <div class="icon-box">
+                                <img src="./img/clock.png" class="mb-5 mx-auto" alt="clock" />
+                            </div>
+                            <div class="icon-type">
+                                <p class="font-medium text-black text-lg">Our Restaurant is Open<br> Around the Clock</p>
+                            </div>
+                        </div>
+                        <div class="w-3/12 pt-5 pr-3 pb-8 pl-3">
+                            <div class="icon-box">
+                                <img src="./img/chef.png" class="mb-5 mx-auto" alt="chef" />
+                            </div>
+                            <div class="icon-type">
+                                <p class="font-medium text-black text-lg">Best Chef</p>
+                            </div>
+                        </div>
+                        <div class="w-3/12 pt-5 pr-3 pb-8 pl-3">
+                            <div class="icon-box">
+                                <img src="./img/cuisine.png" class="mb-5 mx-auto" alt="cuisine" />
+                            </div>
+                            <div class="icon-type">
+                                <p class="font-medium text-black text-lg">We Have The Freshest<br> Product</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section >
+            <div class="menu w-full">
+                <h2 class="font-serif text-center text-5xl mb-5s">From Our Menu</h2>
+            </div>
+            <div class="menu-nav">
+                <div class="container mx-auto flex items-center mb-5">
+                    <div class="w-10/12">
+                        <nav class="flex mt-10 mx-7">
+                            <ul class="uppercase flex text-sm font-medium" data-aos="fade-right" data-aos-duration="800">
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/fast-food.png" alt="images" style="width: 30px; height: 30px;" class="mx-3">
+                                    <a href="#">all</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/drinks.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#cold-drink">cold drink</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/pizza.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#">pizza</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/salad.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#">salad</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/cupcake.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#">sweets</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/spicy.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#">spicy</a>
+                                </li>
+                                <li class="flex mx-5 items-center">
+                                    <img src="img/burger.png" alt="images" style="width: 30px; height: 30px;" class="mx-2">
+                                    <a href="#">burger</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="w-2/12">
+                        <div class="btn mt-8" data-aos="fade-left" data-aos-duration="800">
+                            <h6 class="capitalize text-center py-3" style="border: 1px solid #EE2737; width: 103px; border-radius: 6px; color: #EE2737;">
+                            <a href="#">view all</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="our-menu flex justify-center">
+                <div class="container flex  mt-2">
+                    <div class="w-4/12 flex justify-center">
+                        <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                            <div>
+                                <div class="img-box relative">
+                                    <img src="img/menu-1.jpg" alt="image" class="rounded-t-lg">
+                                    <div class="label absolute top-0 left-0 overflow-hidden">
+                                        <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                    </div>
+                                    <div class="review absolute bottom-4 right-4">
+                                        <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            4.5
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-box px-6 py-4">
+                                  <h2 class="text-2xl mb-5 capitalize text-center font-medium">burger</h2>
+                                  <p class=" text-center mb-5" style="color: #666;">
+                                    It is a long established fact that a reader will be distracted by the readable.
+                                  </p>
+                                  <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$4.56</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4/12">
+                        <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                            <div>
+                                <div class="img-box relative">
+                                    <img src="img/menu-2.jpg" alt="image" class="rounded-t-lg">
+                                    <div class="label absolute top-0 left-0 overflow-hidden">
+                                        <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                    </div>
+                                    <div class="review absolute bottom-4 right-4">
+                                        <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            4.5
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-box px-6 py-4">
+                                  <h2 class="text-2xl mb-5 capitalize text-center font-medium">chicken burger</h2>
+                                  <p class=" text-center mb-5" style="color: #666;">
+                                    It is a long established fact that a reader will be distracted by the readable.
+                                  </p>
+                                  <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$17.56</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4/12">
+                        <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                            <div>
+                                <div class="img-box relative">
+                                    <img src="img/menu-3.jpg" alt="image" class="rounded-t-lg">
+                                    <div class="label absolute top-0 left-0 overflow-hidden">
+                                        <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                    </div>
+                                    <div class="review absolute bottom-4 right-4">
+                                        <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            4.5
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content-box px-6 py-4">
+                                  <h2 class="text-2xl mb-5 capitalize text-center font-medium">pineapple pizza</h2>
+                                  <p class=" text-center mb-5" style="color: #666;">
+                                    It is a long established fact that a reader will be distracted by the readable.
+                                  </p>
+                                  <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$20.50</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="our-menu flex justify-center">
+            <div class="container flex mt-2">
+                <div class="w-4/12">
+                    <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                        <div>
+                            <div class="img-box relative">
+                                <img src="img/menu-4.jpg" alt="image" class="rounded-t-lg">
+                                <div class="label absolute top-0 left-0 overflow-hidden">
+                                    <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                </div>
+                                <div class="review absolute bottom-4 right-4">
+                                    <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        4.5
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-box px-6 py-4">
+                              <h2 class="text-2xl mb-5 capitalize text-center font-medium">pineapple soup</h2>
+                              <p class=" text-center mb-5" style="color: #666;">
+                                It is a long established fact that a reader will be distracted by the readable.
+                              </p>
+                              <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$11.02</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/12">
+                    <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                        <div>
+                            <div class="img-box relative">
+                                <img src="img/menu-5.jpg" alt="image" class="rounded-t-lg">
+                                <div class="label absolute top-0 left-0 overflow-hidden">
+                                    <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                </div>
+                                <div class="review absolute bottom-4 right-4">
+                                    <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        4.5
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-box px-6 py-4">
+                              <h2 class="text-2xl mb-5 capitalize text-center font-medium">momos</h2>
+                              <p class=" text-center mb-5" style="color: #666;">
+                                It is a long established fact that a reader will be distracted by the readable.
+                              </p>
+                              <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$4.56</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/12">
+                    <div class="box-1 rounded-xl m-6" style="box-shadow: 0 1px 20px #babcbb;" data-aos="zoom-in-down" data-aos-duration="800">
+                        <div>
+                            <div class="img-box relative">
+                                <img src="img/menu-6.jpg" alt="image" class="rounded-t-lg">
+                                <div class="label absolute top-0 left-0 overflow-hidden">
+                                    <span class="uppercase bg-orange-400 px-2.5 py-1.5 text-white font-semibold text-xs rounded-tl-lg rounded-br-xl">top seller</span>
+                                </div>
+                                <div class="review absolute bottom-4 right-4">
+                                    <span class="flex items-center bg-white px-2.5 py-1 text-sm rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107" class="w-5 h-5 mr-1">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                        </svg>
+                                        4.5
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-box px-6 py-4">
+                              <h2 class="text-2xl mb-5 capitalize text-center font-medium">pancake</h2>
+                              <p class=" text-center mb-5" style="color: #666;">
+                                It is a long established fact that a reader will be distracted by the readable.
+                              </p>
+                              <h3 class="text-center text-2xl font-bold mb-3" style="color: #EE2737;">$12.20</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        
+    <section class="BURGER flex justify-center mt-32  font-sans"  data-aos="zoom-in" data-aos-duration="5000">
+        <div class="container  bg-no-repeat bg-center flex rounded-lg" style="background-image:url('./img/pic13.png' ); background-attachment: fixed; width: 1200px;height: 550px; background-color: #222222;">
+                <div class="w-8/12 mb-7 px-10">
+                    <div class="contact-head mb-7">
+                        <h4 class="title font-bold mb-2 text-white text-2xl mt-10">Book a Table</h4>
+                        <p class="text-white mb-4 opacity-75  text-sm">Lorem Ipsum is that it has a more-or-less normal distribution<br> of letters, to using making it look like readable English.</p>
+                    </div>
+                    <form>
+                            <div class="first flex">
+                                <div class="w-1/2  mb-7 px-4 flex">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/user - Copy.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Your Name">
+                                            </div> 
+                                    </div>
+                                </div>
+                                <div class="w-1/2  mb-7 px-4 flex">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/phone-call - Copy.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Phone Number">
+                                            </div> 
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <div class="second flex">
+                                <div class="w-1/2  mb-7 px-4 flex">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/group.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Number Of People">
+                                            </div> 
+                                    </div>  
+                                </div>
+                                <div class="w-1/2  mb-7 px-4 flex">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/email.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Your Email">
+                                            </div> 
+                                    </div>     
+                                </div>
+                            </div>
+    
+                            <div class="thurd flex text-center">
+                                <div class="w-1/2 mb-7 px-4 flex  ">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/clock (1) - Copy.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Time">
+                                            </div> 
+                                    </div>                                      
+                                </div>
+                                <div class="w-1/2  mb-7 px-4 flex">
+                                    <div class=" border-b border-white flex items-center justify-center">
+                                        <img src="img/calendar - Copy.png" class="w-6 h-6" alt=""> 
+                                            <div class="timer ">
+                                                <input name="dzName" required="" type="text" class="placeholder:text-white bg-transparent p-0 leading-2xl pb-0.5 text-lg border-0 text-white font-medium h-[48px] outline-none relative top-[-5px] focus:ring-0 pt-3 ml-3" placeholder="Date">
+                                            </div> 
+                                    </div>    
+                                </div>
+                            </div>
+    
+                            <button class=" bg-red-500 p-3.5 px-8 rounded-lg mt-7" style="background-color: #EE2737;">
+                                <a href="#" class="text-white">Book a Table</a>
+                            </button>
+                </div>
+                <div class="px-4  p-5 rounded-lg mt-24" style="background-color: #EE2737; width: 346px; height: 374px;">
+                    <div class=" mb-7 ">
+                        <h5 class="footer-title font-bold mb-2 text-white text-2xl ">Contact info</h5>
+                        <p class="text-white opacity-75 mb-2 text-sm">Lorem Ipsum is simply dummy text of the printing typesetting industry.</p>
+                        <ul>
+                            <li class=" mb-6  flex ">
+                                <div class="ico mx-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" style="color:#cacf7a;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                      </svg>
+                                      
+                                      
+                                </div>
+                               <div class="con">
+                                    <p class="text-white">1247/Plot No. 39, 15th Phase, Colony, Kkatpally, Hyderabad</p>
+                               </div>
+                            </li>
+                            <li class=" mb-6  flex">
+                               <div class="ico mx-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"  style="color:#cacf7a; width: 30px; height: 30px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                  </svg>
+                                  
+                                  
+                               </div>
+                               <div class="con">
+                                <p class="text-white">+91 987-654-3210<br>+91 123-456-7890</p>
+                               </div>
+                            </li>
+                            <li class=" mb-6  flex">
+                               <div class="ico mx-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"  style="color:#cacf7a; width: 30px; height: 30px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                  </svg>
+                                  
+                                  
+                               </div>
+                                <div class="con">
+                                    <p class="text-white">info@example.com<br>info@example.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+       </section>
+
+
+    </main>
+
+
+
+    <!-- footer -->
+
+    <footer class="footer pt-20 bg-[#2222220d] relative font-sans ">
+        <div class="container mx-auto">
+            <div class="footer-top pt-20 pb-5 mb-[60px]">
+                    <div class="footer-subscribe flex pb-10 border-b">
+                        <div class="w-6/12">
+                            <div class="footer-logo mb-4">
+                                <a href="#">
+                                    <img src="../dist/img/pan1.png" alt="pan" />
+                                    <img src="../dist/img/logo (3).png" alt="footer-logo" />
+                                </a>
+                            </div>
+                            <div class="subscribe-text">
+                                <p class="text-sm text-gray-500">Lorem Ipsum is simply dummy text of the printing<br> and typesetting industry.</p>
+                            </div>
+                        </div>
+                        <div class="w-6/12">
+                            <div class="footer-sub-form">
+                                <form>
+                                    <div class="form-heading">
+                                        <h4 class="text-2xl font-semibold mb-4">Subscribe To Our Newsletter</h4>
+                                    </div>
+                                    <div class="form-input flex items-center">
+                                        <div class="subscribe-input items-stretch">
+                                            <input type="text" name="subscribe" placeholder="Enter Your Email" class="rounded-lg w-full items-stretch bg-white w- p-4 text-sm text-black">
+                                        </div>
+                                        <div class="subscribe-btn">
+                                            <button type="submit" value="submit" class="bg-red-600 py-3 px-4 rounded-lg">
+                                                <span class="text-white text-sm block">Subscribe</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-nav flex mb-5 border-b pb-5 ">
+                <div class="w-6/12">
+                    <div class="our-link-head mb-5">
+                        <h4 class="text-2xl uppercase font-semibold">our links</h4>
+                    </div>
+                    <div class="our-link-nav mb-9">
+                        <ul class="flex">
+                            <li class="mx-3.5">
+                                <a href="./index.html" class="text-gray-700 text-sm">Home</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/about.html" class="text-gray-700 text-sm">About Us</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/services.html" class="text-gray-700 text-sm">Services</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/team.html" class="text-gray-700 text-sm">Team</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/menu.html" class="text-gray-700 text-sm">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-6/12 text-end">
+                    <div class="help-head mb-5">
+                        <h4 class="text-2xl uppercase font-semibold">Help Center</h4>
+                    </div>
+                    <div class="head-nav mb-9">
+                        <ul class="flex justify-end">
+                            <li class="mx-3.5">
+                                <a href="#" class="text-gray-700 text-sm">FAQ</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/shop.html" class="text-gray-700 text-sm">Shop</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="#" class="text-gray-700 text-sm">Category Filter</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/testimonial.html" class="text-gray-700 text-sm">Testimonials</a>
+                            </li>
+                            <li class="mx-3.5">
+                                <a href="./pages/contacts.html" class="text-gray-700 text-sm">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-sec py-5 flex">
+                <div class="w-6/12">
+                    <div class="copy-left">
+                        <p class="text-[15px] text-gray-500 font-medium">Copyright 2024 All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="w-6/12 justify-end flex">
+                    <div class="copy-right">
+                        <p class="text-[15px] text-gray-500 font-medium flex items-center text-sm"> Crafted With 
+                            <span class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                            </span>
+                            by  <span class="text-sm text-red-500">  DexignZone</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="../dist/img/tomato.png" alt="tomato" class="absolute top-96 left-0" />
+            <img src="../dist/img/pinuts.png" alt="pinuts" class="absolute top-32 right-0" />
+        </div>
+    </footer>
+
+    <script src="js/cursor.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
